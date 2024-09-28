@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://b64jn7j1l5q7t"]
+
+[ext_resource type="Texture2D" uid="uid://bi3ib3nn4w1ac" path="res://assets/img/scenario/obstacles/vecteezy_trashcan-pixel-art_-ai.png" id="1_f8fck"]
+
+[node name="TrashCan" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("1_f8fck")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(0.06, 0.06)
+polygon = PackedVector2Array(-274, -1364, -274, -1362.3, -276, -1361.2, -276, -1256, -385, -1254, -385, -1038, -708.8, -1038, -712, -1034.8, -712, -929, -820, -927, -820, -820, -926, -818, -929, -818, -929, -705, -820, -703.1, -820, 1252.8, -816.8, 1256, -712, 1256, -710, 1361, -710, 1364, 708.8, 1364, 712, 1360.8, 712, 1255.9, 817, 1254, 820, 1254, 820, -703.1, 926, -705, 929, -705, 929, -816.8, 925.8, -820, 820, -820, 820, -925.8, 816.8, -929, 712, -929, 710, -1038, 385, -1038, 385, -1252.8, 381.8, -1256, 276, -1256, 274, -1361, 274, -1364)
