@@ -1,20 +1,20 @@
 [gd_scene load_steps=3 format=3 uid="uid://wo4fveo5vn0e"]
 
-[ext_resource type="Texture2D" uid="uid://cguid4ic1h8rq" path="res://assets/img/scenario/ground.png" id="1_w1u7i"]
+[ext_resource type="Texture2D" uid="uid://ckufui5cugetl" path="res://assets/img/scenario/ground2.png" id="2_alsru"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lg63a"]
-size = Vector2(2304, 57.6296)
+size = Vector2(2304, 33.8625)
 
 [node name="road" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(2, 0.8)
-texture = ExtResource("1_w1u7i")
+scale = Vector2(1, 0.8)
+texture = ExtResource("2_alsru")
 centered = false
 offset = Vector2(0, 741.96)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1152, 620.77)
+position = Vector2(1152, 632)
 scale = Vector2(1, 0.945)
 shape = SubResource("RectangleShape2D_lg63a")
