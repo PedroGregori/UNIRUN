@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bi3ib3nn4w1ac" path="res://assets/img/scenario/obstacles/vecteezy_trashcan-pixel-art_-ai.png" id="1_bifxg"]
 
 [node name="TrashCan" type="Area2D"]
+scale = Vector2(0.615, 0.615)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.06, 0.06)
