@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dee8x4qpl3n54"]
+[gd_scene load_steps=26 format=3 uid="uid://dee8x4qpl3n54"]
 
 [ext_resource type="Script" path="res://scenes/character.gd" id="1_go33n"]
 [ext_resource type="AudioStream" uid="uid://srbhpsskpuuo" path="res://assets/sound/Jump.wav" id="2_8j3oc"]
@@ -152,6 +152,16 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mis3p"]
 size = Vector2(48, 68)
 
+[sub_resource type="Environment" id="Environment_c0ayr"]
+background_mode = 3
+tonemap_white = 2.65
+glow_enabled = true
+glow_bloom = 0.28
+fog_light_color = Color(0.863473, 0.3687, 0.3652, 1)
+adjustment_enabled = true
+adjustment_contrast = 1.07
+adjustment_saturation = 1.07
+
 [node name="Character" type="CharacterBody2D"]
 z_index = 1
 script = ExtResource("1_go33n")
@@ -162,12 +172,16 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_fsmtl")
 animation = &"run"
 autoplay = "run"
-frame_progress = 0.796338
+frame_progress = 0.295699
 
 [node name="RunCol" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0, 12)
 scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_mis3p")
 
 [node name="JumpTagged" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_8j3oc")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_c0ayr")

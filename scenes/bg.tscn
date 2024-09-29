@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cn6vsuayqbrbm"]
+[gd_scene load_steps=8 format=3 uid="uid://cn6vsuayqbrbm"]
 
 [ext_resource type="Texture2D" uid="uid://echwun8275d0" path="res://assets/img/scenario/city 2/1.png" id="1_he7qv"]
 [ext_resource type="Texture2D" uid="uid://do75osu5os8g6" path="res://assets/img/scenario/city 2/2.png" id="2_pfw31"]
@@ -6,6 +6,16 @@
 [ext_resource type="Texture2D" uid="uid://crogy8bp67egh" path="res://assets/img/scenario/city 2/4.png" id="4_rk0jy"]
 [ext_resource type="Texture2D" uid="uid://ctqvvtebyb0nb" path="res://assets/img/scenario/city 2/5.png" id="5_irejv"]
 [ext_resource type="Texture2D" uid="uid://177q7sg8gpv3" path="res://assets/img/scenario/city 2/6.png" id="6_txxci"]
+
+[sub_resource type="Environment" id="Environment_wafpo"]
+background_mode = 3
+tonemap_white = 2.65
+glow_enabled = true
+glow_bloom = 0.28
+fog_light_color = Color(0.863473, 0.3687, 0.3652, 1)
+adjustment_enabled = true
+adjustment_contrast = 1.07
+adjustment_saturation = 1.07
 
 [node name="Bg" type="ParallaxBackground"]
 metadata/_edit_horizontal_guides_ = [312.0]
@@ -63,3 +73,6 @@ motion_mirroring = Vector2(1152, 0)
 texture_filter = 1
 texture = ExtResource("6_txxci")
 centered = false
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_wafpo")
