@@ -11,7 +11,8 @@
 background_mode = 3
 tonemap_white = 2.65
 glow_enabled = true
-glow_bloom = 0.28
+glow_intensity = 0.63
+glow_bloom = 0.36
 fog_light_color = Color(0.863473, 0.3687, 0.3652, 1)
 adjustment_enabled = true
 adjustment_contrast = 1.07

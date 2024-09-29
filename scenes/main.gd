@@ -52,6 +52,7 @@ func new_game():
 	$Road.position = Vector2i(0, 0)
 	#Reset hud and game over screen
 	$HUD.get_node("ScoreLabel").show()
+	$HUD.get_node("StartLabel").show()
 	$GameOver.hide()
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
