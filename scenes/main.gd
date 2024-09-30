@@ -63,7 +63,6 @@ func _process(delta):
 		if speed > MAX_SPEED:
 			speed = MAX_SPEED
 		adjust_difficulty()
-		print(speed)
 		
 		#generate obstacles
 		generate_obs()
