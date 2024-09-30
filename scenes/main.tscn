@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dsfw75se3hicj"]
+[gd_scene load_steps=9 format=3 uid="uid://dsfw75se3hicj"]
 
 [ext_resource type="PackedScene" uid="uid://cn6vsuayqbrbm" path="res://scenes/bg.tscn" id="1_2buvh"]
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_euwt0"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dsrk2ie37yqxq" path="res://scenes/coincounter.tscn" id="5_ujhkn"]
 [ext_resource type="PackedScene" uid="uid://dq6136dh4ox12" path="res://scenes/restartbutton.tscn" id="6_ma24j"]
 [ext_resource type="PackedScene" uid="uid://bv74301brluo5" path="res://scenes/coin.tscn" id="7_gt5x8"]
+[ext_resource type="Script" path="res://scenes/spawncoins.gd" id="8_xai3n"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_euwt0")
@@ -62,3 +63,9 @@ scale = Vector2(2.205, 2.205)
 [node name="coin4" parent="coins" instance=ExtResource("7_gt5x8")]
 position = Vector2(1307, 441)
 scale = Vector2(2.205, 2.205)
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+script = ExtResource("8_xai3n")
+
+[connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]
