@@ -32,7 +32,7 @@ visible = false
 [node name="coins" type="Node2D" parent="."]
 
 [node name="coin" parent="coins" instance=ExtResource("7_gt5x8")]
-position = Vector2(1011, 566)
+position = Vector2(1011, 559)
 scale = Vector2(2.205, 2.205)
 
 [node name="coin2" parent="coins" instance=ExtResource("7_gt5x8")]

@@ -1,6 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://dsrk2ie37yqxq"]
+[gd_scene load_steps=8 format=3 uid="uid://dsrk2ie37yqxq"]
 
 [ext_resource type="FontFile" uid="uid://c44g0vlp5ukra" path="res://assets/font/Retro Gaming.ttf" id="1_6s5pc"]
+[ext_resource type="Script" path="res://scenes/coinscontrol.gd" id="2_1pto5"]
+[ext_resource type="Texture2D" uid="uid://b35fcfjrpj6q0" path="res://assets/img/coinb/1.png" id="3_c2jyo"]
+[ext_resource type="Texture2D" uid="uid://bg4xflgl7ra4c" path="res://assets/img/coinb/2.png" id="4_dssku"]
+[ext_resource type="Texture2D" uid="uid://wt67c3qdirp8" path="res://assets/img/coinb/3.png" id="5_t3bfn"]
+[ext_resource type="Texture2D" uid="uid://dlplofqwjnlv6" path="res://assets/img/coinb/4.png" id="6_7nvdp"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_1o1g4"]
+frames = 4
+frame_0/texture = ExtResource("3_c2jyo")
+frame_0/duration = 0.45
+frame_1/texture = ExtResource("4_dssku")
+frame_1/duration = 0.45
+frame_2/texture = ExtResource("5_t3bfn")
+frame_2/duration = 0.45
+frame_3/texture = ExtResource("6_7nvdp")
+frame_3/duration = 0.3
 
 [node name="HUD" type="CanvasLayer"]
 
@@ -41,3 +57,28 @@ size_flags_horizontal = 8
 theme_override_fonts/font = ExtResource("1_6s5pc")
 theme_override_font_sizes/font_size = 40
 text = "HIGHSCORE: "
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_1pto5")
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 3.0
+offset_top = 57.0
+offset_right = 28.0
+offset_bottom = 83.0
+texture = SubResource("AnimatedTexture_1o1g4")
+
+[node name="coins_counter" type="Label" parent="Control/TextureRect"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 2.0
+offset_right = 37.0
+offset_bottom = 25.0
+theme_override_font_sizes/font_size = 16
+text = "0"

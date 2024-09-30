@@ -1,17 +1,14 @@
-extends Area2D
+extends Control
 
-var coins := 1
+@onready var coins_counter: Label = $TextureRect/coins_counter
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	coins_counter.text = str(Globals.coins)
+	print(Globals.coins)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
-
-
-func _on_body_entered(body: Node2D) -> void:
-	Globals.coins += coins
-	print(Globals.coins)
-	queue_free()
+	coins_counter.text = str(Globals.coins)
