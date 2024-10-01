@@ -118,6 +118,7 @@ animations = [{
 radius = 11.0454
 
 [node name="Coin" type="Area2D"]
+scale = Vector2(1.645, 1.645)
 collision_layer = 4
 script = ExtResource("1_bldnq")
 

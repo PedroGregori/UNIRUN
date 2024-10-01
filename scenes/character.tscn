@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dee8x4qpl3n54"]
+[gd_scene load_steps=26 format=3 uid="uid://dee8x4qpl3n54"]
 
 [ext_resource type="Script" path="res://scenes/character.gd" id="1_go33n"]
 [ext_resource type="AudioStream" uid="uid://srbhpsskpuuo" path="res://assets/sound/Jump.wav" id="2_8j3oc"]
@@ -159,6 +159,9 @@ fog_light_color = Color(0.863473, 0.3687, 0.3652, 1)
 adjustment_contrast = 1.07
 adjustment_saturation = 1.07
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i8f1n"]
+size = Vector2(67, 132)
+
 [node name="Character" type="CharacterBody2D"]
 z_index = 1
 collision_mask = 2
@@ -176,8 +179,11 @@ frame_progress = 0.49573
 stream = ExtResource("2_8j3oc")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-visible = false
-polygon = PackedVector2Array(-7, -58, 14, -58, 22, -52, 23, -32, 34, -31, 44, -27, 47, -17, 44, 0, 34, 19, 55, 74, -69, 75, -41, -26, -23, -36)
+polygon = PackedVector2Array(-7, -58, 14, -58, 22, -52, 23, -32, 34, -31, 44, -27, 47, -17, 44, 0, 34, 19, 34, 63, -45, 72, -41, -26, -23, -36)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_c0ayr")
+
+[node name="GroundCollision" type="CollisionShape2D" parent="."]
+position = Vector2(-10.5, 12)
+shape = SubResource("RectangleShape2D_i8f1n")
